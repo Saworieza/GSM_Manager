@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @scope.type %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @scope.site %>
+</p>
+
+<%= link_to 'Edit', edit_scope_path(@scope) %> |
+<%= link_to 'Back', scopes_path %>

@@ -1,0 +1,27 @@
+<%= form_for(scope) do |f| %>
+  <% if scope.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scope.errors.count, "error") %> prohibited this scope from being saved:</h2>
+
+      <ul>
+      <% scope.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :site_id %>
+    <%= f.text_field :site_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

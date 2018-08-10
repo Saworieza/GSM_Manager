@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customer Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Customer po</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_quotes.each do |customer_quote| %>
+      <tr>
+        <td><%= customer_quote.name %></td>
+        <td><%= customer_quote.date %></td>
+        <td><%= customer_quote.amount %></td>
+        <td><%= customer_quote.customer_po %></td>
+        <td><%= link_to 'Show', customer_quote %></td>
+        <td><%= link_to 'Edit', edit_customer_quote_path(customer_quote) %></td>
+        <td><%= link_to 'Destroy', customer_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer Quote', new_customer_quote_path %>

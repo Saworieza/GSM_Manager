@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @cost_center.number %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @cost_center.details %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @cost_center.account %>
+</p>
+
+<%= link_to 'Edit', edit_cost_center_path(@cost_center) %> |
+<%= link_to 'Back', cost_centers_path %>

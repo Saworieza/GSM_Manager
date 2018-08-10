@@ -1,0 +1,47 @@
+<%= form_for(site) do |f| %>
+  <% if site.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(site.errors.count, "error") %> prohibited this site from being saved:</h2>
+
+      <ul>
+      <% site.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tower_height %>
+    <%= f.number_field :tower_height %>
+  </div>
+
+  <div class="field">
+    <%= f.label :town %>
+    <%= f.text_field :town %>
+  </div>
+
+  <div class="field">
+    <%= f.label :town_classification %>
+    <%= f.text_field :town_classification %>
+  </div>
+
+  <div class="field">
+    <%= f.label :customer_po_id %>
+    <%= f.text_field :customer_po_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer_quote.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @customer_quote.date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @customer_quote.amount %>
+</p>
+
+<p>
+  <strong>Customer po:</strong>
+  <%= @customer_quote.customer_po %>
+</p>
+
+<%= link_to 'Edit', edit_customer_quote_path(@customer_quote) %> |
+<%= link_to 'Back', customer_quotes_path %>

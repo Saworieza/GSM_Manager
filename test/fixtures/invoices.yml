@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-08-10 15:30:17
+  number: 1
+  amount: 1
+  status: MyString
+  milestone_type: MyString
+  customer_po: one
+
+two:
+  date: 2018-08-10 15:30:17
+  number: 1
+  amount: 1
+  status: MyString
+  milestone_type: MyString
+  customer_po: two
