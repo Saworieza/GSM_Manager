@@ -3,15 +3,15 @@
 one:
   number: 1
   name: MyString
-  tower_height: 1
+  tower_height: MyString
   town: MyString
   town_classification: MyString
-  customer_po: one
+  customerpo: one
 
 two:
   number: 1
   name: MyString
-  tower_height: 1
+  tower_height: MyString
   town: MyString
   town_classification: MyString
-  customer_po: two
+  customerpo: two

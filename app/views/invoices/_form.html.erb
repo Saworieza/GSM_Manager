@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.datetime_select :date %>
+    <%= f.date_select :date %>
   </div>
 
   <div class="field">
@@ -36,9 +36,13 @@
     <%= f.text_field :milestone_type %>
   </div>
 
-  <div class="field">
-    <%= f.label :customer_po_id %>
-    <%= f.text_field :customer_po_id %>
+<!--   <div class="field">
+    <%#= f.label :customerpo_id %>
+    <%#= f.text_field :customerpo_id %>
+  </div>
+ -->  <div class="field">
+    <%= f.label :customer_po%>
+    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
   </div>
 
   <div class="actions">

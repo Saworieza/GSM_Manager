@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180810132442) do
+ActiveRecord::Schema.define(version: 20180810183957) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -28,35 +28,35 @@ ActiveRecord::Schema.define(version: 20180810132442) do
     t.index ["account_id"], name: "index_cost_centers_on_account_id"
   end
 
-  create_table "customer_pos", force: :cascade do |t|
-    t.datetime "Date"
+  create_table "customerpos", force: :cascade do |t|
+    t.datetime "date"
     t.integer  "number"
     t.integer  "cost_center_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["cost_center_id"], name: "index_customer_pos_on_cost_center_id"
+    t.index ["cost_center_id"], name: "index_customerpos_on_cost_center_id"
   end
 
-  create_table "customer_quotes", force: :cascade do |t|
+  create_table "customerquotes", force: :cascade do |t|
     t.string   "name"
-    t.datetime "date"
+    t.date     "date"
     t.integer  "amount"
-    t.integer  "customer_po_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["customer_po_id"], name: "index_customer_quotes_on_customer_po_id"
+    t.integer  "customerpo_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["customerpo_id"], name: "index_customerquotes_on_customerpo_id"
   end
 
   create_table "invoices", force: :cascade do |t|
-    t.datetime "date"
+    t.date     "date"
     t.integer  "number"
     t.integer  "amount"
     t.string   "status"
     t.string   "milestone_type"
-    t.integer  "customer_po_id"
+    t.integer  "customerpo_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["customer_po_id"], name: "index_invoices_on_customer_po_id"
+    t.index ["customerpo_id"], name: "index_invoices_on_customerpo_id"
   end
 
   create_table "scopes", force: :cascade do |t|
@@ -70,13 +70,13 @@ ActiveRecord::Schema.define(version: 20180810132442) do
   create_table "sites", force: :cascade do |t|
     t.integer  "number"
     t.string   "name"
-    t.integer  "tower_height"
+    t.string   "tower_height"
     t.string   "town"
     t.string   "town_classification"
-    t.integer  "customer_po_id"
+    t.integer  "customerpo_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.index ["customer_po_id"], name: "index_sites_on_customer_po_id"
+    t.index ["customerpo_id"], name: "index_sites_on_customerpo_id"
   end
 
   create_table "statuses", force: :cascade do |t|

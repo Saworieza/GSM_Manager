@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Customer PO', new_customer_po_path %>
+<%= link_to 'New Customer PO', new_customerpo_path %>
 <p>
   <strong>Number:</strong>
   <%= @cost_center.number %>
@@ -15,5 +15,10 @@
   <%= @cost_center.account.name %>
 </p>
 
+<h4> Customer POs</h4>
+<% @cost_center.customerpos.each do |customerpo| %>
+		<%= link_to customerpo.date, customerpo_path %>
+		<%= customerpo.number %><br>
+	<% end %>
 <%= link_to 'Edit', edit_cost_center_path(@cost_center) %> |
 <%= link_to 'Back', cost_centers_path %>

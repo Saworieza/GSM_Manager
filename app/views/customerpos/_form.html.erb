@@ -1,0 +1,37 @@
+<%= form_for(customerpo) do |f| %>
+  <% if customerpo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customerpo.errors.count, "error") %> prohibited this customerpo from being saved:</h2>
+
+      <ul>
+      <% customerpo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+  </div>
+
+  <!-- <div class="field">
+    <%#= f.label :cost_center_id %>
+    <%#= f.text_field :cost_center_id %>
+  </div> -->
+
+  <div class="field">
+    <%= f.label :cost_center %>
+    <%= f.collection_select :cost_center_id, CostCenter.all, :id, :number %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: MyString
   date: 2018-08-10
-  number: 1
   amount: 1
-  status: MyString
-  milestone_type: MyString
   customerpo: one
 
 two:
+  name: MyString
   date: 2018-08-10
-  number: 1
   amount: 1
-  status: MyString
-  milestone_type: MyString
   customerpo: two

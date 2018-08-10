@@ -1,3 +1,3 @@
 class Site < ApplicationRecord
-  belongs_to :customer_po
+  belongs_to :customerpo
 end

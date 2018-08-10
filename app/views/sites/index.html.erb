@@ -10,7 +10,7 @@
       <th>Tower height</th>
       <th>Town</th>
       <th>Town classification</th>
-      <th>Customer po</th>
+      <th>Customerpo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +23,7 @@
         <td><%= site.tower_height %></td>
         <td><%= site.town %></td>
         <td><%= site.town_classification %></td>
-        <td><%= site.customer_po %></td>
+        <td><%= site.customerpo.number %></td>
         <td><%= link_to 'Show', site %></td>
         <td><%= link_to 'Edit', edit_site_path(site) %></td>
         <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>

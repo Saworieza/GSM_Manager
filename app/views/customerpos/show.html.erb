@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<nav>
+	<%= link_to 'Create Invoice', new_invoice_path %>
+	<%= link_to 'Create Quote', new_customerquote_path %>
+	<%= link_to 'Create Site', new_site_path %>
+</nav>
+<p>
+  <strong>Date:</strong>
+  <%= @customerpo.date %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @customerpo.number %>
+</p>
+
+<p>
+  <strong>Cost center:</strong>
+  <%= @customerpo.cost_center.number %>
+</p>
+
+
+<h4> Invoices</h4>
+<% @customerpo.invoices.each do |invoice| %>
+		<%= link_to invoice.date, invoice_path %>
+		<%= invoice.number %>
+		<%= invoice.amount %>
+		<br>
+	<% end %>
+
+<h4> Customer Quotes</h4>
+<% @customerpo.customerquotes.each do |cusquote| %>
+		<%= link_to cusquote.name, customerquote_path %>
+		<%= cusquote.date %>
+		<%= cusquote.amount %>
+		<br>
+	<% end %>
+
+<h4> Customer Sites</h4>
+<% @customerpo.sites.each do |site| %>
+		<%= link_to site.name, site_path %>
+		<%= site.number %>
+		<%= site.town %>
+		<br>
+	<% end %>
+
+
+
+
+<%= link_to 'Edit', edit_customerpo_path(@customerpo) %> |
+<%= link_to 'Back', customerpos_path %>

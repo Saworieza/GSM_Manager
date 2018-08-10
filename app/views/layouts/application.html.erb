@@ -11,7 +11,13 @@
   <body>
   	<nav>
   		<%= link_to 'Home', root_path %>
-      <%= link_to 'SD', cost_centers_path %>
+      <%= link_to 'SDs', cost_centers_path %>
+      <%= link_to 'Customer POs', customerpos_path %>
+      <%= link_to 'Customer Quotes', customerquotes_path %>
+      <%= link_to 'Invoices', invoices_path %>
+      <%= link_to 'Sites', sites_path %>
+      <%#= link_to 'Status', statuses_path %>
+      <%#= link_to 'Scopes', scopes_path %>
   	</nav>
     <%= yield %>
   </body>

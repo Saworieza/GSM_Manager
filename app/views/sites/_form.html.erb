@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :tower_height %>
-    <%= f.number_field :tower_height %>
+    <%= f.text_field :tower_height %>
   </div>
 
   <div class="field">
@@ -32,13 +32,29 @@
   </div>
 
   <div class="field">
+    <%= f.label :status%>
+    We designed this and the scope in reverse
+    <%#= f.collection_select :status_id, Status.all, :id, :state %>
+  </div>
+  <div class="field">
+    <%= f.label :scope%>
+    We designed this and the scope in reverse
+    <%#= f.collection_select :scopes_id, Scope.all, :id, :type %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :town_classification %>
     <%= f.text_field :town_classification %>
   </div>
 
+  <!-- <div class="field">
+    <%#= f.label :customerpo_id %>
+    <%#= f.text_field :customerpo_id %>
+  </div> -->
   <div class="field">
-    <%= f.label :customer_po_id %>
-    <%= f.text_field :customer_po_id %>
+    <%= f.label :customer_po%>
+    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
   </div>
 
   <div class="actions">
