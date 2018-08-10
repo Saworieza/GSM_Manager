@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Date: 2018-08-10 15:26:55
+  Date: 2018-08-10 16:23:08
   number: 1
   cost_center: one
 
 two:
-  Date: 2018-08-10 15:26:55
+  Date: 2018-08-10 16:23:08
   number: 1
   cost_center: two

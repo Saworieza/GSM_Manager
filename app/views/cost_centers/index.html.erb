@@ -17,7 +17,7 @@
       <tr>
         <td><%= cost_center.number %></td>
         <td><%= cost_center.details %></td>
-        <td><%= cost_center.account %></td>
+        <td><%= cost_center.account.name %></td>
         <td><%= link_to 'Show', cost_center %></td>
         <td><%= link_to 'Edit', edit_cost_center_path(cost_center) %></td>
         <td><%= link_to 'Destroy', cost_center, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= link_to 'New SD', new_cost_center_path %>
 <p>
   <strong>Name:</strong>
   <%= @account.name %>
@@ -9,6 +9,13 @@
   <strong>Description:</strong>
   <%= @account.description %>
 </p>
+
+<p> Cost Centers</p>
+<% @account.cost_centers.each do |cost_center| %>
+		<%= link_to cost_center.number, cost_center_path %>
+		<%= cost_center.details %><br>
+	<% end %>
+
 
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>

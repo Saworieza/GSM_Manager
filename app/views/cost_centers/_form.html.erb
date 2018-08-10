@@ -21,10 +21,18 @@
     <%= f.text_area :details %>
   </div>
 
+
   <div class="field">
-    <%= f.label :account_id %>
-    <%= f.text_field :account_id %>
+    <%= f.label :Account %>
+    <%#= f.collection_select :account_id, Account.where(:user_id => current_user.id), :id, :name %>
+    <%= f.collection_select :account_id, Account.all, :id, :name %>
   </div>
+
+
+  <!-- <div class="field">
+    <%#= f.label :account_id %>
+    <%#= f.text_field :account_id %>
+  </div> -->
 
   <div class="actions">
     <%= f.submit %>
