@@ -26,6 +26,7 @@
 
 <h4> Customer POs</h4>
 <% @customerquote.customerpos.each do |customerpo| %>
-		<%= link_to customerpo.number, customerpo_path %>
-		<%= customerpo.date %><br>
-	<% end %>
+	<%= customerpo.id %>
+	<%= link_to customerpo.number, customerpo_path %>
+	<%= customerpo.date %><br>
+<% end %>

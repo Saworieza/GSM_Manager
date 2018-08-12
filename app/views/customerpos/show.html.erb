@@ -17,3 +17,23 @@
 
 <%= link_to 'Edit', edit_customerpo_path(@customerpo) %> |
 <%= link_to 'Back', customerpos_path %>
+
+<div class="row">
+	<div class="col-lg-6">
+		<h4> Invoices</h4>
+		<%= link_to 'New Invoice', new_invoice_path %>
+		<% @customerpo.invoices.each do |invoice| %>
+			<%= invoice.id %>
+			<%= link_to invoice.number, invoice_path %>
+			<%= invoice.date %><br>
+		<% end %>
+	</div>
+	<div class="col-lg-6">
+		<h4>Sites</h4>
+		<%= link_to 'New Site', new_site_path %>
+		<% @customerpo.sites.each do |site| %>
+			<%= site.id %>
+			<%= link_to site.name, site_path %>
+			<br>
+		<% end %>
+	</div>
