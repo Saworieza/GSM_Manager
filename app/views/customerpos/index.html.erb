@@ -17,7 +17,7 @@
       <tr>
         <td><%= customerpo.date %></td>
         <td><%= customerpo.number %></td>
-        <td><%= customerpo.customerquote %></td>
+        <td><%= customerpo.customerquote.name %></td>
         <td><%= link_to 'Show', customerpo %></td>
         <td><%= link_to 'Edit', edit_customerpo_path(customerpo) %></td>
         <td><%= link_to 'Destroy', customerpo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
