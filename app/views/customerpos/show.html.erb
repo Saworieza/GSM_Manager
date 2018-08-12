@@ -12,7 +12,8 @@
 
 <p>
   <strong>Customerquote:</strong>
-  <%= @customerpo.customerquote.name %>
+  <%#= @customerpo.customerquote.name %>
+  <%= link_to Customerquote.find(@customerpo.customerquote_id).name, customerquote_path(@customerpo.customerquote_id) %>
 </p>
 
 <%= link_to 'Edit', edit_customerpo_path(@customerpo) %> |
@@ -24,7 +25,7 @@
 		<%= link_to 'New Invoice', new_invoice_path %><br>
 		<% @customerpo.invoices.each do |invoice| %>
 			<%= invoice.id %>
-			<%= link_to invoice.number, invoice_path %>
+			<%= link_to invoice.number, invoice_path(invoice) %>
 			<%= invoice.date %><br>
 		<% end %>
 	</div>
@@ -33,7 +34,7 @@
 		<%= link_to 'New Site', new_site_path %><br>
 		<% @customerpo.sites.each do |site| %>
 			<%= site.id %>
-			<%= link_to site.name, site_path %>
+			<%= link_to site.name, site_path(site) %>
 			<br>
 		<% end %>
 	</div>

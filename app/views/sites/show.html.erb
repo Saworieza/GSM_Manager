@@ -32,7 +32,8 @@
 
 <p>
   <strong>Customerpo:</strong>
-  <%= @site.customerpo.number %>
+  <%#= @site.customerpo.number %>
+  <%= link_to Customerpo.find(@site.customerpo_id).number, customerpo_path(@site.customerpo_id) %>
 </p>
 
 <%= link_to 'Edit', edit_site_path(@site) %> |

@@ -12,7 +12,7 @@
 
 <p> Cost Centers</p>
 <% @account.cost_centers.each do |cost_center| %>
-		<%= link_to cost_center.number, cost_center_path %>
+		<%= link_to cost_center.number, cost_center_path(cost_center) %>
 		<%= cost_center.details %><br>
 	<% end %>
 

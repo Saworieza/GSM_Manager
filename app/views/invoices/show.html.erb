@@ -27,7 +27,8 @@
 
 <p>
   <strong>Customerpo:</strong>
-  <%= @invoice.customerpo.number %>
+  <%= link_to @invoice.customerpo.number, customerpo_path(@invoice.customerpo_id) %>
+  <%#= link_to Customerpo.find(@invoice.customerpo_id).number, customerpo_path(@invoice.customerpo_id) %>
 </p>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |

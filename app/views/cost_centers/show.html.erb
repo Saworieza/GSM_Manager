@@ -12,13 +12,14 @@
 
 <p>
   <strong>Account:</strong>
-  <%= @cost_center.account.name %>
+  <%= link_to @cost_center.account.name, account_path(@cost_center.account_id) %>
+  <%#= link_to @invoice.customerpo.number, customerpo_path(@invoice.customerpo_id) %>
 </p>
 
 <h4> Custmer Quotes</h4>
 <% @cost_center.customerquotes.each do |customerquote| %>
-	<%= link_to customerquote.name, customerquote_path %>
-	<%= link_to customerquote.date, customerquote_path %>
+	<%= link_to customerquote.name, customerquote_path(customerquote) %>
+	<%= link_to customerquote.date, customerquote_path(customerquote) %>
 	<%= customerquote.amount %>
 	<br>
 <% end %>

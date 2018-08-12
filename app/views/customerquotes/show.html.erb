@@ -17,7 +17,8 @@
 
 <p>
   <strong>Cost center:</strong>
-  <%= @customerquote.cost_center.number %>
+  <%#= @customerquote.cost_center.number %>
+  <%= link_to CostCenter.find(@customerquote.cost_center_id).number, cost_center_path(@customerquote.cost_center_id) %>
 </p>
 
 <%= link_to 'Edit', edit_customerquote_path(@customerquote) %> |
@@ -27,6 +28,6 @@
 <h4> Customer POs</h4>
 <% @customerquote.customerpos.each do |customerpo| %>
 	<%= customerpo.id %>
-	<%= link_to customerpo.number, customerpo_path %>
+	<%= link_to customerpo.number, customerpo_path(customerpo) %>
 	<%= customerpo.date %><br>
 <% end %>
