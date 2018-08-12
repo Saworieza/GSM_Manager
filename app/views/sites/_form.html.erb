@@ -41,9 +41,14 @@
     <%= f.text_field :town_class %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
+    <%#= f.label :customerpo_id %>
+    <%#= f.text_field :customerpo_id %>
+  </div> -->
+
+   <div class="field">
     <%= f.label :customerpo_id %>
-    <%= f.text_field :customerpo_id %>
+    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
   </div>
 
   <div class="actions">

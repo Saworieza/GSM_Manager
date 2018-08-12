@@ -21,7 +21,7 @@
 <div class="row">
 	<div class="col-lg-6">
 		<h4> Invoices</h4>
-		<%= link_to 'New Invoice', new_invoice_path %>
+		<%= link_to 'New Invoice', new_invoice_path %><br>
 		<% @customerpo.invoices.each do |invoice| %>
 			<%= invoice.id %>
 			<%= link_to invoice.number, invoice_path %>
@@ -30,7 +30,7 @@
 	</div>
 	<div class="col-lg-6">
 		<h4>Sites</h4>
-		<%= link_to 'New Site', new_site_path %>
+		<%= link_to 'New Site', new_site_path %><br>
 		<% @customerpo.sites.each do |site| %>
 			<%= site.id %>
 			<%= link_to site.name, site_path %>
