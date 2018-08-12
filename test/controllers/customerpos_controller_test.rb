@@ -17,7 +17,7 @@ class CustomerposControllerTest < ActionDispatch::IntegrationTest
 
   test "should create customerpo" do
     assert_difference('Customerpo.count') do
-      post customerpos_url, params: { customerpo: { cost_center_id: @customerpo.cost_center_id, date: @customerpo.date, number: @customerpo.number } }
+      post customerpos_url, params: { customerpo: { customerquote_id: @customerpo.customerquote_id, date: @customerpo.date, number: @customerpo.number } }
     end
 
     assert_redirected_to customerpo_url(Customerpo.last)
@@ -34,7 +34,7 @@ class CustomerposControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update customerpo" do
-    patch customerpo_url(@customerpo), params: { customerpo: { cost_center_id: @customerpo.cost_center_id, date: @customerpo.date, number: @customerpo.number } }
+    patch customerpo_url(@customerpo), params: { customerpo: { customerquote_id: @customerpo.customerquote_id, date: @customerpo.date, number: @customerpo.number } }
     assert_redirected_to customerpo_url(@customerpo)
   end
 

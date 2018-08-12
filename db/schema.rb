@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180810183957) do
+ActiveRecord::Schema.define(version: 20180812053444) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -29,22 +29,22 @@ ActiveRecord::Schema.define(version: 20180810183957) do
   end
 
   create_table "customerpos", force: :cascade do |t|
-    t.datetime "date"
+    t.date     "date"
     t.integer  "number"
-    t.integer  "cost_center_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["cost_center_id"], name: "index_customerpos_on_cost_center_id"
+    t.integer  "customerquote_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["customerquote_id"], name: "index_customerpos_on_customerquote_id"
   end
 
   create_table "customerquotes", force: :cascade do |t|
     t.string   "name"
     t.date     "date"
     t.integer  "amount"
-    t.integer  "customerpo_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["customerpo_id"], name: "index_customerquotes_on_customerpo_id"
+    t.integer  "cost_center_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["cost_center_id"], name: "index_customerquotes_on_cost_center_id"
   end
 
   create_table "invoices", force: :cascade do |t|
@@ -52,10 +52,10 @@ ActiveRecord::Schema.define(version: 20180810183957) do
     t.integer  "number"
     t.integer  "amount"
     t.string   "status"
-    t.string   "milestone_type"
+    t.string   "milestonetype"
     t.integer  "customerpo_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.index ["customerpo_id"], name: "index_invoices_on_customerpo_id"
   end
 
@@ -70,12 +70,13 @@ ActiveRecord::Schema.define(version: 20180810183957) do
   create_table "sites", force: :cascade do |t|
     t.integer  "number"
     t.string   "name"
-    t.string   "tower_height"
+    t.string   "status"
+    t.integer  "towerheight"
     t.string   "town"
-    t.string   "town_classification"
+    t.string   "town_class"
     t.integer  "customerpo_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.index ["customerpo_id"], name: "index_sites_on_customerpo_id"
   end
 

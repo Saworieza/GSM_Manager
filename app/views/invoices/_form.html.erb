@@ -32,17 +32,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :milestone_type %>
-    <%= f.text_field :milestone_type %>
+    <%= f.label :milestonetype %>
+    <%= f.text_field :milestonetype %>
   </div>
 
-<!--   <div class="field">
-    <%#= f.label :customerpo_id %>
-    <%#= f.text_field :customerpo_id %>
-  </div>
- -->  <div class="field">
-    <%= f.label :customer_po%>
-    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
+  <div class="field">
+    <%= f.label :customerpo_id %>
+    <%= f.text_field :customerpo_id %>
   </div>
 
   <div class="actions">

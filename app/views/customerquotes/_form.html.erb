@@ -26,13 +26,9 @@
     <%= f.number_field :amount %>
   </div>
 
-  <!-- <div class="field">
-    <%#= f.label :customerpo_id %>
-    <%#= f.text_field :customerpo_id %>
-  </div> -->
   <div class="field">
-    <%= f.label :customer_po%>
-    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
+    <%= f.label :cost_center_id %>
+    <%= f.text_field :cost_center_id %>
   </div>
 
   <div class="actions">

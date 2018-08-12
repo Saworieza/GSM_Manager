@@ -1,3 +1,3 @@
 class Customerquote < ApplicationRecord
-  belongs_to :customerpo
+  belongs_to :cost_center
 end

@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :statuses
   resources :sites
   resources :invoices
-  resources :customerquotes
   resources :customerpos
+  resources :customerquotes
   resources :cost_centers
   resources :accounts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

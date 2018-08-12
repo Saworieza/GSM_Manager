@@ -9,7 +9,7 @@
       <th>Number</th>
       <th>Amount</th>
       <th>Status</th>
-      <th>Milestone type</th>
+      <th>Milestonetype</th>
       <th>Customerpo</th>
       <th colspan="3"></th>
     </tr>
@@ -22,8 +22,8 @@
         <td><%= invoice.number %></td>
         <td><%= invoice.amount %></td>
         <td><%= invoice.status %></td>
-        <td><%= invoice.milestone_type %></td>
-        <td><%= invoice.customerpo.number %></td>
+        <td><%= invoice.milestonetype %></td>
+        <td><%= invoice.customerpo %></td>
         <td><%= link_to 'Show', invoice %></td>
         <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
         <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>

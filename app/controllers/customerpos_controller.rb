@@ -69,6 +69,6 @@ class CustomerposController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customerpo_params
-      params.require(:customerpo).permit(:date, :number, :cost_center_id)
+      params.require(:customerpo).permit(:date, :number, :customerquote_id)
     end
 end

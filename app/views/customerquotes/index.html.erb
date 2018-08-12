@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>Date</th>
       <th>Amount</th>
-      <th>Customerpo</th>
+      <th>Cost center</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= customerquote.name %></td>
         <td><%= customerquote.date %></td>
         <td><%= customerquote.amount %></td>
-        <td><%= customerquote.customerpo.number %></td>
+        <td><%= customerquote.cost_center %></td>
         <td><%= link_to 'Show', customerquote %></td>
         <td><%= link_to 'Edit', edit_customerquote_path(customerquote) %></td>
         <td><%= link_to 'Destroy', customerquote, method: :delete, data: { confirm: 'Are you sure?' } %></td>

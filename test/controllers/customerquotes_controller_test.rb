@@ -17,7 +17,7 @@ class CustomerquotesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create customerquote" do
     assert_difference('Customerquote.count') do
-      post customerquotes_url, params: { customerquote: { amount: @customerquote.amount, customerpo_id: @customerquote.customerpo_id, date: @customerquote.date, name: @customerquote.name } }
+      post customerquotes_url, params: { customerquote: { amount: @customerquote.amount, cost_center_id: @customerquote.cost_center_id, date: @customerquote.date, name: @customerquote.name } }
     end
 
     assert_redirected_to customerquote_url(Customerquote.last)
@@ -34,7 +34,7 @@ class CustomerquotesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update customerquote" do
-    patch customerquote_url(@customerquote), params: { customerquote: { amount: @customerquote.amount, customerpo_id: @customerquote.customerpo_id, date: @customerquote.date, name: @customerquote.name } }
+    patch customerquote_url(@customerquote), params: { customerquote: { amount: @customerquote.amount, cost_center_id: @customerquote.cost_center_id, date: @customerquote.date, name: @customerquote.name } }
     assert_redirected_to customerquote_url(@customerquote)
   end
 
