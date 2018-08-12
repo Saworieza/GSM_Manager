@@ -1,5 +1,5 @@
 class CostCenter < ApplicationRecord
   belongs_to :account
 
-  has_many :customerpos, dependent: :destroy
+  has_many :customerquotes, dependent: :destroy
 end
