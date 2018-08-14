@@ -69,6 +69,6 @@ class ScopesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scope_params
-      params.require(:scope).permit(:type, :site_id)
+      params.require(:scope).permit(:type)
     end
 end

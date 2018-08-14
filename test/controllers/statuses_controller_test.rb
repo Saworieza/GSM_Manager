@@ -17,7 +17,7 @@ class StatusesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create status" do
     assert_difference('Status.count') do
-      post statuses_url, params: { status: { site_id: @status.site_id, state: @status.state } }
+      post statuses_url, params: { status: { state: @status.state } }
     end
 
     assert_redirected_to status_url(Status.last)
@@ -34,7 +34,7 @@ class StatusesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update status" do
-    patch status_url(@status), params: { status: { site_id: @status.site_id, state: @status.state } }
+    patch status_url(@status), params: { status: { state: @status.state } }
     assert_redirected_to status_url(@status)
   end
 

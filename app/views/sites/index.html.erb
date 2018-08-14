@@ -5,12 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Number</th>
       <th>Name</th>
-      <th>Status</th>
-      <th>Towerheight</th>
+      <th>Number</th>
+      <th>Tower height</th>
       <th>Town</th>
-      <th>Town class</th>
+      <th>Status</th>
+      <th>Scope</th>
       <th>Customerpo</th>
       <th colspan="3"></th>
     </tr>
@@ -19,13 +19,13 @@
   <tbody>
     <% @sites.each do |site| %>
       <tr>
-        <td><%= site.number %></td>
         <td><%= site.name %></td>
-        <td><%= site.status %></td>
-        <td><%= site.towerheight %></td>
+        <td><%= site.number %></td>
+        <td><%= site.tower_height %></td>
         <td><%= site.town %></td>
-        <td><%= site.town_class %></td>
-        <td><%= site.customerpo.number %></td>
+        <td><%= site.status %></td>
+        <td><%= site.scope %></td>
+        <td><%= site.customerpo %></td>
         <td><%= link_to 'Show', site %></td>
         <td><%= link_to 'Edit', edit_site_path(site) %></td>
         <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,0 +1,31 @@
+<h1>Accounts</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <!-- <th colspan="2"></th> -->
+      <!-- <th scope="col">Handle</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <% @accounts.each do |account| %>
+      <th scope="row"><%= account.id %></th>
+      <td><%= link_to account.name, account %></td>
+      <td><%= account.description %></td>
+      <!-- <td><%#= link_to 'Edit', edit_account_path(account) %></td> -->
+      <td><%= link_to edit_account_path(account) do %>
+            <i class="fa fa-edit"></i>
+          <% end %>
+      </td>
+      <!-- <td><%#= link_to fa_icon("facebook", text: "Facebook", class: "facebookauth"), edit_account_path(account) %></td> -->
+      <td><%= link_to account, method: :delete, data: {confirm: 'Delete This Account?' } do %>
+            <i class="fa fa-trash "></i>
+          <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

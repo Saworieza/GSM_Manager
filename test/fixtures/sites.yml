@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  number: 1
   name: MyString
-  status: MyString
-  towerheight: 1
-  town: MyString
-  town_class: MyString
+  number: 1
+  tower_height: 1
+  town: one
+  status: one
+  scope: one
   customerpo: one
 
 two:
-  number: 1
   name: MyString
-  status: MyString
-  towerheight: 1
-  town: MyString
-  town_class: MyString
+  number: 1
+  tower_height: 1
+  town: two
+  status: two
+  scope: two
   customerpo: two

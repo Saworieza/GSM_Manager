@@ -27,22 +27,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%= f.label :status_id %>
+    <%= f.text_field :status_id %>
   </div>
 
   <div class="field">
-    <%= f.label :milestonetype %>
-    <%= f.text_field :milestonetype %>
+    <%= f.label :milestone_id %>
+    <%= f.text_field :milestone_id %>
   </div>
 
-  <!-- <div class="field">
-    <%#= f.label :customerpo_id %>
-    <%#= f.text_field :customerpo_id %>
-  </div> -->
   <div class="field">
     <%= f.label :customerpo_id %>
-    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
+    <%= f.text_field :customerpo_id %>
   </div>
 
   <div class="actions">

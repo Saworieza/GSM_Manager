@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>State</th>
-      <th>Site</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +14,6 @@
     <% @statuses.each do |status| %>
       <tr>
         <td><%= status.state %></td>
-        <td><%= status.site %></td>
         <td><%= link_to 'Show', status %></td>
         <td><%= link_to 'Edit', edit_status_path(status) %></td>
         <td><%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %></td>

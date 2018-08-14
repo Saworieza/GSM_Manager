@@ -12,43 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :number %>
-    <%= f.number_field :number %>
-  </div>
-
-  <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%= f.label :number %>
+    <%= f.number_field :number %>
   </div>
 
   <div class="field">
-    <%= f.label :towerheight %>
-    <%= f.number_field :towerheight %>
+    <%= f.label :tower_height %>
+    <%= f.number_field :tower_height %>
   </div>
 
   <div class="field">
-    <%= f.label :town %>
-    <%= f.text_field :town %>
+    <%= f.label :town_id %>
+    <%= f.text_field :town_id %>
   </div>
 
   <div class="field">
-    <%= f.label :town_class %>
-    <%= f.text_field :town_class %>
+    <%= f.label :status_id %>
+    <%= f.text_field :status_id %>
   </div>
 
-  <!-- <div class="field">
-    <%#= f.label :customerpo_id %>
-    <%#= f.text_field :customerpo_id %>
-  </div> -->
+  <div class="field">
+    <%= f.label :scope_id %>
+    <%= f.text_field :scope_id %>
+  </div>
 
-   <div class="field">
+  <div class="field">
     <%= f.label :customerpo_id %>
-    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
+    <%= f.text_field :customerpo_id %>
   </div>
 
   <div class="actions">

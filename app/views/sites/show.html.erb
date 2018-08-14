@@ -1,23 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Number:</strong>
-  <%= @site.number %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @site.name %>
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @site.status %>
+  <strong>Number:</strong>
+  <%= @site.number %>
 </p>
 
 <p>
-  <strong>Towerheight:</strong>
-  <%= @site.towerheight %>
+  <strong>Tower height:</strong>
+  <%= @site.tower_height %>
 </p>
 
 <p>
@@ -26,14 +21,18 @@
 </p>
 
 <p>
-  <strong>Town class:</strong>
-  <%= @site.town_class %>
+  <strong>Status:</strong>
+  <%= @site.status %>
+</p>
+
+<p>
+  <strong>Scope:</strong>
+  <%= @site.scope %>
 </p>
 
 <p>
   <strong>Customerpo:</strong>
-  <%#= @site.customerpo.number %>
-  <%= link_to Customerpo.find(@site.customerpo_id).number, customerpo_path(@site.customerpo_id) %>
+  <%= @site.customerpo %>
 </p>
 
 <%= link_to 'Edit', edit_site_path(@site) %> |

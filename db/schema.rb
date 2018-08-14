@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180812053444) do
+ActiveRecord::Schema.define(version: 20180814125234) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180812053444) do
   create_table "customerpos", force: :cascade do |t|
     t.date     "date"
     t.integer  "number"
+    t.integer  "amount"
     t.integer  "customerquote_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
@@ -51,41 +52,58 @@ ActiveRecord::Schema.define(version: 20180812053444) do
     t.date     "date"
     t.integer  "number"
     t.integer  "amount"
-    t.string   "status"
-    t.string   "milestonetype"
+    t.integer  "status_id"
+    t.integer  "milestone_id"
     t.integer  "customerpo_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["customerpo_id"], name: "index_invoices_on_customerpo_id"
+    t.index ["milestone_id"], name: "index_invoices_on_milestone_id"
+    t.index ["status_id"], name: "index_invoices_on_status_id"
+  end
+
+  create_table "milestones", force: :cascade do |t|
+    t.string   "type"
+    t.integer  "stage"
+    t.integer  "customerpo_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["customerpo_id"], name: "index_milestones_on_customerpo_id"
   end
 
   create_table "scopes", force: :cascade do |t|
     t.string   "type"
-    t.integer  "site_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["site_id"], name: "index_scopes_on_site_id"
   end
 
   create_table "sites", force: :cascade do |t|
-    t.integer  "number"
     t.string   "name"
-    t.string   "status"
-    t.integer  "towerheight"
-    t.string   "town"
-    t.string   "town_class"
+    t.integer  "number"
+    t.integer  "tower_height"
+    t.integer  "town_id"
+    t.integer  "status_id"
+    t.integer  "scope_id"
     t.integer  "customerpo_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["customerpo_id"], name: "index_sites_on_customerpo_id"
+    t.index ["scope_id"], name: "index_sites_on_scope_id"
+    t.index ["status_id"], name: "index_sites_on_status_id"
+    t.index ["town_id"], name: "index_sites_on_town_id"
   end
 
   create_table "statuses", force: :cascade do |t|
     t.string   "state"
-    t.integer  "site_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["site_id"], name: "index_statuses_on_site_id"
+  end
+
+  create_table "towns", force: :cascade do |t|
+    t.string   "name"
+    t.string   "classification"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

@@ -11,30 +11,14 @@
 </p>
 
 <p>
+  <strong>Amount:</strong>
+  <%= @customerpo.amount %>
+</p>
+
+<p>
   <strong>Customerquote:</strong>
-  <%#= @customerpo.customerquote.name %>
-  <%= link_to Customerquote.find(@customerpo.customerquote_id).name, customerquote_path(@customerpo.customerquote_id) %>
+  <%= @customerpo.customerquote %>
 </p>
 
 <%= link_to 'Edit', edit_customerpo_path(@customerpo) %> |
 <%= link_to 'Back', customerpos_path %>
-
-<div class="row">
-	<div class="col-lg-6">
-		<h4> Invoices</h4>
-		<%= link_to 'New Invoice', new_invoice_path %><br>
-		<% @customerpo.invoices.each do |invoice| %>
-			<%= invoice.id %>
-			<%= link_to invoice.number, invoice_path(invoice) %>
-			<%= invoice.date %><br>
-		<% end %>
-	</div>
-	<div class="col-lg-6">
-		<h4>Sites</h4>
-		<%= link_to 'New Site', new_site_path %><br>
-		<% @customerpo.sites.each do |site| %>
-			<%= site.id %>
-			<%= link_to site.name, site_path(site) %>
-			<br>
-		<% end %>
-	</div>

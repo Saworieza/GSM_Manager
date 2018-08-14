@@ -4,8 +4,8 @@ class CreateInvoices < ActiveRecord::Migration[5.0]
       t.date :date
       t.integer :number
       t.integer :amount
-      t.string :status
-      t.string :milestonetype
+      t.belongs_to :status, foreign_key: true
+      t.belongs_to :milestone, foreign_key: true
       t.belongs_to :customerpo, foreign_key: true
 
       t.timestamps

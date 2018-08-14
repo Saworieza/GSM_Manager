@@ -2,8 +2,6 @@
 
 one:
   state: MyString
-  site: one
 
 two:
   state: MyString
-  site: two
