@@ -2,7 +2,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @milestone.type %>
+  <%= @milestone.milestone_type %>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Customerpo:</strong>
-  <%= @milestone.customerpo %>
+  <%= @milestone.customerpo.number %>
 </p>
 
 <%= link_to 'Edit', edit_milestone_path(@milestone) %> |

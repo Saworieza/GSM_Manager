@@ -26,19 +26,32 @@
     <%= f.number_field :amount %>
   </div>
 
+  <!-- <div class="field">
+    <%#= f.label :status_id %>
+    <%#= f.text_field :status_id %>
+  </div> -->
   <div class="field">
     <%= f.label :status_id %>
-    <%= f.text_field :status_id %>
+    <%= f.collection_select :status_id, Status.all, :id, :state %>
   </div>
 
+ <!--  <div class="field">
+    <%#= f.label :milestone_id %>
+    <%#= f.text_field :milestone_id %>
+  </div> -->
   <div class="field">
     <%= f.label :milestone_id %>
-    <%= f.text_field :milestone_id %>
+    <%= f.collection_select :milestone_id, Milestone.all, :id, :milestone_type %>
   </div>
+
+  <!-- <div class="field">
+    <%#= f.label :customerpo_id %>
+    <%#= f.text_field :customerpo_id %>
+  </div> -->
 
   <div class="field">
     <%= f.label :customerpo_id %>
-    <%= f.text_field :customerpo_id %>
+    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
   </div>
 
   <div class="actions">

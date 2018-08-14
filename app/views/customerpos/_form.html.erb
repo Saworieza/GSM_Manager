@@ -26,9 +26,14 @@
     <%= f.number_field :amount %>
   </div>
 
+  <!-- <div class="field">
+    <%#= f.label :customerquote_id %>
+    <%#= f.text_field :customerquote_id %>
+  </div> -->
+
   <div class="field">
     <%= f.label :customerquote_id %>
-    <%= f.text_field :customerquote_id %>
+    <%= f.collection_select :customerquote_id, Customerquote.all, :id, :name %>
   </div>
 
   <div class="actions">

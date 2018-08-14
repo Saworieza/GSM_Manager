@@ -22,10 +22,10 @@
         <td><%= site.name %></td>
         <td><%= site.number %></td>
         <td><%= site.tower_height %></td>
-        <td><%= site.town %></td>
-        <td><%= site.status %></td>
-        <td><%= site.scope %></td>
-        <td><%= site.customerpo %></td>
+        <td><%= site.town.name %></td>
+        <td><%= site.status.state %></td>
+        <td><%= site.scope.scope_type %></td>
+        <td><%= site.customerpo.number %></td>
         <td><%= link_to 'Show', site %></td>
         <td><%= link_to 'Edit', edit_site_path(site) %></td>
         <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>

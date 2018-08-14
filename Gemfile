@@ -33,7 +33,10 @@ gem "cocoon"
 gem 'will_paginate' 
 gem 'will_paginate-bootstrap'
 gem 'bootstrap-datepicker-rails'
-gem 'ckeditor', github: 'galetahub/ckeditor'
+# gem 'bootstrap',     '~> 4.1.1'
+# gem 'material-sass', '~> 4.1.1'
+# gem 'material_icons'
+# gem 'ckeditor', github: 'galetahub/ckeditor'
 
 gem 'devise'
 gem 'chosen-rails'

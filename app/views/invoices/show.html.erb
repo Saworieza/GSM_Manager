@@ -17,17 +17,20 @@
 
 <p>
   <strong>Status:</strong>
-  <%= @invoice.status %>
+  <%#= @invoice.status.state %>
+  <%= link_to Status.find(@invoice.status_id).state, status_path(@invoice.status_id) %>
 </p>
 
 <p>
   <strong>Milestone:</strong>
-  <%= @invoice.milestone %>
+  <%#= @invoice.milestone.milestone_type %>
+  <%= link_to Milestone.find(@invoice.milestone_id).milestone_type, milestone_path(@invoice.milestone_id) %>
 </p>
 
 <p>
   <strong>Customerpo:</strong>
-  <%= @invoice.customerpo %>
+  <%#= @invoice.customerpo.number %>
+  <%= link_to Customerpo.find(@invoice.customerpo_id).number, customerpo_path(@invoice.customerpo_id) %>
 </p>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |

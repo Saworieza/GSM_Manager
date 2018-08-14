@@ -15,9 +15,9 @@
   <tbody>
     <% @milestones.each do |milestone| %>
       <tr>
-        <td><%= milestone.type %></td>
+        <td><%= milestone.milestone_type %></td>
         <td><%= milestone.stage %></td>
-        <td><%= milestone.customerpo %></td>
+        <td><%= milestone.customerpo.number %></td>
         <td><%= link_to 'Show', milestone %></td>
         <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
         <td><%= link_to 'Destroy', milestone, method: :delete, data: { confirm: 'Are you sure?' } %></td>

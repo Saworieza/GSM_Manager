@@ -1,5 +1,4 @@
 <p id="notice"><%= notice%></p>
-<%= link_to 'New Customer PO', new_customerpo_path %>
 <p>
   <strong>Name:</strong>
   <%= @customerquote.name %>
@@ -26,6 +25,7 @@
 
 
 <h4> Customer POs</h4>
+<%= link_to 'New Customer PO', new_customerpo_path %><br>
 <% @customerquote.customerpos.each do |customerpo| %>
 	<%= customerpo.id %>
 	<%= link_to customerpo.number, customerpo_path(customerpo) %>

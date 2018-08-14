@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180814125234) do
+ActiveRecord::Schema.define(version: 20180814134701) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -63,16 +63,16 @@ ActiveRecord::Schema.define(version: 20180814125234) do
   end
 
   create_table "milestones", force: :cascade do |t|
-    t.string   "type"
+    t.string   "milestone_type"
     t.integer  "stage"
     t.integer  "customerpo_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.index ["customerpo_id"], name: "index_milestones_on_customerpo_id"
   end
 
   create_table "scopes", force: :cascade do |t|
-    t.string   "type"
+    t.string   "scope_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
