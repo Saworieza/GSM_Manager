@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180817092924) do
+ActiveRecord::Schema.define(version: 20180817112559) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20180817092924) do
     t.integer  "customerquote_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["customerquote_id"], name: "index_customerpos_on_customerquote_id"
+    t.index ["customerquote_id"], name: "index_customerpos_on_customerquote_id", unique: true
   end
 
   create_table "customerquotes", force: :cascade do |t|
@@ -108,8 +108,10 @@ ActiveRecord::Schema.define(version: 20180817092924) do
   create_table "towns", force: :cascade do |t|
     t.string   "name"
     t.string   "classification"
+    t.integer  "region_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.index ["region_id"], name: "index_towns_on_region_id"
   end
 
 end
