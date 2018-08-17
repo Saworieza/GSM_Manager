@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date %>
-    <%= f.date_select :date %>
+    <%= f.label :number %>
+    <%= f.number_field :number %>
   </div>
 
   <div class="field">
-    <%= f.label :number %>
-    <%= f.number_field :number %>
+    <%= f.label :date %>
+    <%= f.date_select :date %>
   </div>
 
   <div class="field">
@@ -26,14 +26,9 @@
     <%= f.number_field :amount %>
   </div>
 
-  <!-- <div class="field">
-    <%#= f.label :customerquote_id %>
-    <%#= f.text_field :customerquote_id %>
-  </div> -->
-
   <div class="field">
     <%= f.label :customerquote_id %>
-    <%= f.collection_select :customerquote_id, Customerquote.all, :id, :name %>
+    <%= f.text_field :customerquote_id %>
   </div>
 
   <div class="actions">

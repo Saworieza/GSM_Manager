@@ -17,7 +17,7 @@ class InvoicesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create invoice" do
     assert_difference('Invoice.count') do
-      post invoices_url, params: { invoice: { amount: @invoice.amount, customerpo_id: @invoice.customerpo_id, date: @invoice.date, milestone_id: @invoice.milestone_id, number: @invoice.number, status_id: @invoice.status_id } }
+      post invoices_url, params: { invoice: { amount: @invoice.amount, customerpo_id: @invoice.customerpo_id, date: @invoice.date, number: @invoice.number, scope_id: @invoice.scope_id, status_id: @invoice.status_id } }
     end
 
     assert_redirected_to invoice_url(Invoice.last)
@@ -34,7 +34,7 @@ class InvoicesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update invoice" do
-    patch invoice_url(@invoice), params: { invoice: { amount: @invoice.amount, customerpo_id: @invoice.customerpo_id, date: @invoice.date, milestone_id: @invoice.milestone_id, number: @invoice.number, status_id: @invoice.status_id } }
+    patch invoice_url(@invoice), params: { invoice: { amount: @invoice.amount, customerpo_id: @invoice.customerpo_id, date: @invoice.date, number: @invoice.number, scope_id: @invoice.scope_id, status_id: @invoice.status_id } }
     assert_redirected_to invoice_url(@invoice)
   end
 

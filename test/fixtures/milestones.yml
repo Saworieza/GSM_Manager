@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
+  milestone_type: MyString
   stage: 1
-  customerpo: one
 
 two:
-  type: 
+  milestone_type: MyString
   stage: 1
-  customerpo: two

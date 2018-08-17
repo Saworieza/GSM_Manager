@@ -16,33 +16,28 @@
 </p>
 
 <p>
-  <strong>Town:</strong>
-  <%#= @site.town.name %>
-  <%= link_to Town.find(@site.town_id).name, town_path(@site.town_id) %>
-</p>
-
-<p>
-  <strong>Town Classification:</strong>
-  <%#= @site.town.classification %>
-  <%= link_to Town.find(@site.town_id).classification, town_path(@site.town_id) %>
-</p>
-
-<p>
   <strong>Status:</strong>
-  <%#= @site.status.state %>
-  <%= link_to Status.find(@site.status_id).state, status_path(@site.status_id) %>
+  <%= @site.status %>
 </p>
 
 <p>
   <strong>Scope:</strong>
-  <%#= @site.scope.scope_type %>
-  <%= link_to Scope.find(@site.scope_id).scope_type, scope_path(@site.scope_id) %>
+  <%= @site.scope %>
+</p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @site.town %>
 </p>
 
 <p>
   <strong>Customerpo:</strong>
-  <%#= @site.customerpo.number %>
-  <%= link_to Customerpo.find(@site.customerpo_id).number, customerpo_path(@site.customerpo_id) %>
+  <%= @site.customerpo %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @site.region %>
 </p>
 
 <%= link_to 'Edit', edit_site_path(@site) %> |

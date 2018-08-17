@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @customerpo.date %>
+  <strong>Number:</strong>
+  <%= @customerpo.number %>
 </p>
 
 <p>
-  <strong>Number:</strong>
-  <%= @customerpo.number %>
+  <strong>Date:</strong>
+  <%= @customerpo.date %>
 </p>
 
 <p>
@@ -16,33 +16,9 @@
 </p>
 
 <p>
-  <strong>customerquote:</strong>
-  <%#= @customerpo.customerquote.name %>
-  <%= link_to Customerquote.find(@customerpo.customerquote_id).name, customerquote_path(@customerpo.customerquote_id) %>
+  <strong>Customerquote:</strong>
+  <%= @customerpo.customerquote %>
 </p>
 
 <%= link_to 'Edit', edit_customerpo_path(@customerpo) %> |
 <%= link_to 'Back', customerpos_path %>
-
-<div class="row">
-	<div class="col-lg-6">
-		<h4> Invoices</h4>
-		<%= link_to 'New Invoice', new_invoice_path %><br>
-		<% @customerpo.invoices.each do |invoice| %>
-			<%= link_to invoice.number, invoice_path(invoice) %>
-			<%= invoice.date %>
-			<%= invoice.amount %>
-			<br>
-		<% end %>
-	</div>
-	<div class="col-lg-6">
-		<h4> Sites</h4>
-		<%= link_to 'New Site', new_site_path %><br>
-		<% @customerpo.sites.each do |site| %>
-			<%= link_to site.name, site_path(site) %>
-			<%= link_to site.number, site_path(site) %>
-			<%#= site.town.name %>
-			<br>
-		<% end %>
-	</div>
-</div>

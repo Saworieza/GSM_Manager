@@ -4,16 +4,18 @@ one:
   name: MyString
   number: 1
   tower_height: 1
-  town: one
   status: one
   scope: one
+  town: one
   customerpo: one
+  region: one
 
 two:
   name: MyString
   number: 1
   tower_height: 1
-  town: two
   status: two
   scope: two
+  town: two
   customerpo: two
+  region: two

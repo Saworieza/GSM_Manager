@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2018-08-14
   number: 1
+  date: 2018-08-17
   amount: 1
   status: one
-  milestone: one
+  scope: one
   customerpo: one
 
 two:
-  date: 2018-08-14
   number: 1
+  date: 2018-08-17
   amount: 1
   status: two
-  milestone: two
+  scope: two
   customerpo: two

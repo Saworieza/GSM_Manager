@@ -17,7 +17,7 @@ class ScopesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create scope" do
     assert_difference('Scope.count') do
-      post scopes_url, params: { scope: { type: @scope.type } }
+      post scopes_url, params: { scope: { scope_type: @scope.scope_type } }
     end
 
     assert_redirected_to scope_url(Scope.last)
@@ -34,7 +34,7 @@ class ScopesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update scope" do
-    patch scope_url(@scope), params: { scope: { type: @scope.type } }
+    patch scope_url(@scope), params: { scope: { scope_type: @scope.scope_type } }
     assert_redirected_to scope_url(@scope)
   end
 

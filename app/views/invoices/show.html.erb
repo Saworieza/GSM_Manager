@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @invoice.date %>
+  <strong>Number:</strong>
+  <%= @invoice.number %>
 </p>
 
 <p>
-  <strong>Number:</strong>
-  <%= @invoice.number %>
+  <strong>Date:</strong>
+  <%= @invoice.date %>
 </p>
 
 <p>
@@ -17,20 +17,17 @@
 
 <p>
   <strong>Status:</strong>
-  <%#= @invoice.status.state %>
-  <%= link_to Status.find(@invoice.status_id).state, status_path(@invoice.status_id) %>
+  <%= @invoice.status %>
 </p>
 
 <p>
-  <strong>Milestone:</strong>
-  <%#= @invoice.milestone.milestone_type %>
-  <%= link_to Milestone.find(@invoice.milestone_id).milestone_type, milestone_path(@invoice.milestone_id) %>
+  <strong>Scope:</strong>
+  <%= @invoice.scope %>
 </p>
 
 <p>
   <strong>Customerpo:</strong>
-  <%#= @invoice.customerpo.number %>
-  <%= link_to Customerpo.find(@invoice.customerpo_id).number, customerpo_path(@invoice.customerpo_id) %>
+  <%= @invoice.customerpo %>
 </p>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |

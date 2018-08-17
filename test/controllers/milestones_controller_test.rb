@@ -17,7 +17,7 @@ class MilestonesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create milestone" do
     assert_difference('Milestone.count') do
-      post milestones_url, params: { milestone: { customerpo_id: @milestone.customerpo_id, stage: @milestone.stage, type: @milestone.type } }
+      post milestones_url, params: { milestone: { milestone_type: @milestone.milestone_type, stage: @milestone.stage } }
     end
 
     assert_redirected_to milestone_url(Milestone.last)
@@ -34,7 +34,7 @@ class MilestonesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update milestone" do
-    patch milestone_url(@milestone), params: { milestone: { customerpo_id: @milestone.customerpo_id, stage: @milestone.stage, type: @milestone.type } }
+    patch milestone_url(@milestone), params: { milestone: { milestone_type: @milestone.milestone_type, stage: @milestone.stage } }
     assert_redirected_to milestone_url(@milestone)
   end
 

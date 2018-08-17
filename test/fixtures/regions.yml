@@ -2,12 +2,6 @@
 
 one:
   name: MyString
-  date: 2018-08-17
-  amount: 1
-  cost_center: one
 
 two:
   name: MyString
-  date: 2018-08-17
-  amount: 1
-  cost_center: two

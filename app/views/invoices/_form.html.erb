@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date %>
-    <%= f.date_select :date %>
+    <%= f.label :number %>
+    <%= f.number_field :number %>
   </div>
 
   <div class="field">
-    <%= f.label :number %>
-    <%= f.number_field :number %>
+    <%= f.label :date %>
+    <%= f.date_select :date %>
   </div>
 
   <div class="field">
@@ -26,32 +26,19 @@
     <%= f.number_field :amount %>
   </div>
 
-  <!-- <div class="field">
-    <%#= f.label :status_id %>
-    <%#= f.text_field :status_id %>
-  </div> -->
   <div class="field">
     <%= f.label :status_id %>
-    <%= f.collection_select :status_id, Status.all, :id, :state %>
+    <%= f.text_field :status_id %>
   </div>
 
- <!--  <div class="field">
-    <%#= f.label :milestone_id %>
-    <%#= f.text_field :milestone_id %>
-  </div> -->
   <div class="field">
-    <%= f.label :milestone_id %>
-    <%= f.collection_select :milestone_id, Milestone.all, :id, :milestone_type %>
+    <%= f.label :scope_id %>
+    <%= f.text_field :scope_id %>
   </div>
-
-  <!-- <div class="field">
-    <%#= f.label :customerpo_id %>
-    <%#= f.text_field :customerpo_id %>
-  </div> -->
 
   <div class="field">
     <%= f.label :customerpo_id %>
-    <%= f.collection_select :customerpo_id, Customerpo.all, :id, :number %>
+    <%= f.text_field :customerpo_id %>
   </div>
 
   <div class="actions">

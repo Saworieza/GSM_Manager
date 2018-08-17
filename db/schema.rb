@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180814134701) do
+ActiveRecord::Schema.define(version: 20180817092924) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20180814134701) do
   end
 
   create_table "customerpos", force: :cascade do |t|
-    t.date     "date"
     t.integer  "number"
+    t.date     "date"
     t.integer  "amount"
     t.integer  "customerquote_id"
     t.datetime "created_at",       null: false
@@ -49,26 +49,30 @@ ActiveRecord::Schema.define(version: 20180814134701) do
   end
 
   create_table "invoices", force: :cascade do |t|
-    t.date     "date"
     t.integer  "number"
+    t.date     "date"
     t.integer  "amount"
     t.integer  "status_id"
-    t.integer  "milestone_id"
+    t.integer  "scope_id"
     t.integer  "customerpo_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["customerpo_id"], name: "index_invoices_on_customerpo_id"
-    t.index ["milestone_id"], name: "index_invoices_on_milestone_id"
+    t.index ["scope_id"], name: "index_invoices_on_scope_id"
     t.index ["status_id"], name: "index_invoices_on_status_id"
   end
 
   create_table "milestones", force: :cascade do |t|
     t.string   "milestone_type"
     t.integer  "stage"
-    t.integer  "customerpo_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["customerpo_id"], name: "index_milestones_on_customerpo_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "scopes", force: :cascade do |t|
@@ -81,13 +85,15 @@ ActiveRecord::Schema.define(version: 20180814134701) do
     t.string   "name"
     t.integer  "number"
     t.integer  "tower_height"
-    t.integer  "town_id"
     t.integer  "status_id"
     t.integer  "scope_id"
+    t.integer  "town_id"
     t.integer  "customerpo_id"
+    t.integer  "region_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["customerpo_id"], name: "index_sites_on_customerpo_id"
+    t.index ["region_id"], name: "index_sites_on_region_id"
     t.index ["scope_id"], name: "index_sites_on_scope_id"
     t.index ["status_id"], name: "index_sites_on_status_id"
     t.index ["town_id"], name: "index_sites_on_town_id"

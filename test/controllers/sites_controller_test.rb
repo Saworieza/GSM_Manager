@@ -17,7 +17,7 @@ class SitesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create site" do
     assert_difference('Site.count') do
-      post sites_url, params: { site: { customerpo_id: @site.customerpo_id, name: @site.name, number: @site.number, scope_id: @site.scope_id, status_id: @site.status_id, tower_height: @site.tower_height, town_id: @site.town_id } }
+      post sites_url, params: { site: { customerpo_id: @site.customerpo_id, name: @site.name, number: @site.number, region_id: @site.region_id, scope_id: @site.scope_id, status_id: @site.status_id, tower_height: @site.tower_height, town_id: @site.town_id } }
     end
 
     assert_redirected_to site_url(Site.last)
@@ -34,7 +34,7 @@ class SitesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update site" do
-    patch site_url(@site), params: { site: { customerpo_id: @site.customerpo_id, name: @site.name, number: @site.number, scope_id: @site.scope_id, status_id: @site.status_id, tower_height: @site.tower_height, town_id: @site.town_id } }
+    patch site_url(@site), params: { site: { customerpo_id: @site.customerpo_id, name: @site.name, number: @site.number, region_id: @site.region_id, scope_id: @site.scope_id, status_id: @site.status_id, tower_height: @site.tower_height, town_id: @site.town_id } }
     assert_redirected_to site_url(@site)
   end
 
