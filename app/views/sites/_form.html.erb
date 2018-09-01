@@ -28,28 +28,50 @@
 
   <div class="field">
     <%= f.label :status_id %>
-    <%= f.text_field :status_id %>
+    <%= f.collection_select :status, Status.all, :id, :state %>
   </div>
 
+  <!-- <div class="field">
+    <%#= f.label :status_id %>
+    <%#= f.text_field :status_id %>
+  </div> -->
+
+  <!-- <div class="field">
+    <%#= f.label :scope_id %>
+    <%#= f.text_field :scope_id %>
+  </div> -->
   <div class="field">
-    <%= f.label :scope_id %>
-    <%= f.text_field :scope_id %>
+    <%= f.label :scope %>
+    <%= f.collection_select :scope, Scope.all, :id, :scope_type %>
   </div>
 
+  <!-- <div class="field">
+    <%#= f.label :town_id %>
+    <%#= f.text_field :town_id %>
+  </div> -->
   <div class="field">
     <%= f.label :town_id %>
-    <%= f.text_field :town_id %>
+    <%= f.collection_select :town, Town.all, :id, :name %>
   </div>
 
+ <!--  <div class="field">
+    <%#= f.label :customerpo_id %>
+    <%#= f.text_field :customerpo_id %>
+  </div> -->
   <div class="field">
     <%= f.label :customerpo_id %>
-    <%= f.text_field :customerpo_id %>
+    <%= f.collection_select :customerpo, Customerpo.all, :id, :number %>
   </div>
 
+ <!--  <div class="field">
+    <%#= f.label :region_id %>
+    <%#= f.text_field :region_id %>
+  </div> -->
   <div class="field">
     <%= f.label :region_id %>
-    <%= f.text_field :region_id %>
+    <%= f.collection_select :region, Region.all, :id, :name %>
   </div>
+
 
   <div class="actions">
     <%= f.submit %>

@@ -17,7 +17,12 @@
 
 <p>
   <strong>Cost center:</strong>
-  <%= @customerquote.cost_center %>
+  <%= @customerquote.cost_center.number %>
+</p>
+
+<p>
+  <strong>Cost center:</strong>
+  <%= @customerquote.site.name %>
 </p>
 
 <%= link_to 'Edit', edit_customerquote_path(@customerquote) %> |

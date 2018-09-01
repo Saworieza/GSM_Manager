@@ -21,6 +21,11 @@
     <%= f.text_field :classification %>
   </div>
 
+  <div class="field">
+    <%= f.label :Region %>
+    <%= f.collection_select :region_id, Region.all, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

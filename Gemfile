@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rails', '~> 5.0.7'
+gem 'rails', '~> 5.2.0'
 gem 'pg'
 gem 'puma'
 gem 'sass-rails'
@@ -28,7 +28,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'jquery-ui-rails'
 gem 'haml'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+# gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem "cocoon"
 gem 'will_paginate' 
 gem 'will_paginate-bootstrap'
